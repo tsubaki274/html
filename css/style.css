@@ -1,7 +1,169 @@
-body {
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 2;
+/* 全体 */
+html {
+    font-family: sans-serif; /* フォントの指定 */
+    font-size: 16px; /* フォントサイズの指定 */
+    line-height: 2; /* 行間の指定 */
+    color: #333; /* テキストカラーの指定 */
+    background-color: #f8f8f8; /* 背景色の指定 */
+}
+
+/* ヘッダー */
+.header {
+    width: 100%; /* 幅を画面いっぱいに */
+    text-align: center; /* テキストを中央揃え */
+    background-color: rgb(238, 238, 238);
+    padding: 10px 0;
+}
+
+/* 全体　ヘッダーとフッター除く */
+.container {
+    text-align: center;
+    margin: 0 auto; /* 中央寄せ */
+    max-width: 700px; /* 最大幅を700pxに制限 */
+}
+
+/* ナビ */
+nav {
+    background-color: rgb(236, 235, 235);
+    text-align: left;
+    border-top: rgb(199, 196, 196) solid 2px; /* 上部のボーダー */
+    border-bottom: rgb(199, 196, 196) solid 2px; /* 下部のボーダー */
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0 0 0 25px;
+}
+
+/* アンカーリンク */
+nav a {
     color: #333;
-    background-color: #f8f8f8;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+/* タイトル */
+h2 {
+    background-color: rgb(204, 203, 203);
+    border-left: red solid 7px; /* 左側のボーダー */
+    font-size: 26px;
+    font-weight: 700; /* フォントの太さを設定 */
+    text-align: left;
+    letter-spacing: 0.17em; /* 文字間の指定 */
+    margin: 50px 0;
+}
+
+/* 写真 */
+main img {
+    max-width: 60%; /* 画像の最大幅を60%に制限 */
+}
+
+/* あらすじ */
+.synopsis {
+    border: rgb(199, 196, 196) solid 2px;
+}
+
+/* あらすじ　見出し */
+h3 {
+    color: rgb(51, 102, 255);
+    text-align: left;
+    margin: 25px 0 0 0;
+    padding: 0 0 0 50px;
+}
+
+/* 内容 */
+p {
+    text-align: left;
+    max-width: 60ch;
+    padding: 0 50px;
+    margin-top: 0;
+}
+
+.manga-item a {
+    display: block; /* 要素をブロック要素に変更 */
+    width: fit-content; /* 要素の幅をその内容に合わせて自動的に調整 */
+    margin: 10px 0;
+    text-decoration: none; /* アンダーラインを削除 */
+}
+
+/* 詳細リンク */
+.manga-item a.buy {
+    background-color: rgb(245, 158, 0);
+    color: #fff;
+    display: inline-block; /* インラインブロック要素に変更 */
+    text-align: center;
+    margin-top: 5px;
+    padding: 13px 100px;
+    border-radius: 5px; /* 角を丸くする */
+    font-weight: bold;
+    position: relative; /* 矢印の位置決めのための基準点 */
+}
+
+.manga-item a.buy:hover {
+    background-color: rgb(240, 191, 76);
+}
+
+/* 購入リンク */
+.manga-item a.buy::after {
+    content: ">"; /* 矢印の表示 */
+    position: absolute; /* 親要素を基準に配置 */
+    right: 10px; /* 右端からの距離 */
+    top: 50%; /* 上端から50%の位置 */
+    transform: translateY(
+        -50%
+    ); /* 要素自体の高さの半分だけ上に移動して中央揃え */
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/* フッター*/
+footer {
+    text-decoration: none; /* アンダーラインを削除 */
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    margin: 30px 0 0 0;
+    padding: 30px 0;
+}
+
+/* 個別 */
+
+/* リロード */
+.header a {
+    color: #333;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: none;
+}
+
+/* 目次 */
+h4 {
+    margin: 0;
+}
+
+footer a {
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+}
+
+footer a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+/* コピーライト */
+.copyright {
+    background-color: rgb(34, 34, 34);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px 700px;
 }
