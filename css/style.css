@@ -7,12 +7,17 @@ html {
     background-color: #f8f8f8; /* 背景色の指定 */
 }
 
+body {
+    margin: 0 0 0 0;
+}
+
 /* ヘッダー */
 .header {
     width: 100%; /* 幅を画面いっぱいに */
     text-align: center; /* テキストを中央揃え */
     background-color: rgb(238, 238, 238);
     padding: 10px 0;
+    margin-top: 0;
 }
 
 /* 全体　ヘッダーとフッター除く */
@@ -83,14 +88,20 @@ p {
     margin-top: 0;
 }
 
+/* 詳細リンク */
 .manga-item a {
     display: block; /* 要素をブロック要素に変更 */
     width: fit-content; /* 要素の幅をその内容に合わせて自動的に調整 */
     margin: 10px 0;
     text-decoration: none; /* アンダーラインを削除 */
+    color: #3710c5;
 }
 
-/* 詳細リンク */
+.manga-item a:visited {
+    color: #3710c5;
+}
+
+/* 購入リンク */
 .manga-item a.buy {
     background-color: rgb(245, 158, 0);
     color: #fff;
@@ -107,7 +118,6 @@ p {
     background-color: rgb(240, 191, 76);
 }
 
-/* 購入リンク */
 .manga-item a.buy::after {
     content: ">"; /* 矢印の表示 */
     position: absolute; /* 親要素を基準に配置 */
