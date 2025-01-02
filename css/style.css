@@ -154,6 +154,7 @@ footer {
 /* 目次 */
 h4 {
     margin: 0;
+    padding-left: 7px;
 }
 
 footer a {
@@ -171,9 +172,27 @@ footer a:hover {
 
 /* コピーライト */
 .copyright {
+    max-width: 100%;
     background-color: rgb(34, 34, 34);
     color: #fff;
     text-align: center;
     margin-bottom: 0;
-    padding: 10px 700px;
+    padding: 10px 0;
+}
+
+/*レスポンシブ対応 */
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 90%; /* 幅を90%に調整してスマホ画面に収める */
+        margin: 0 auto; /* 中央寄せ */
+        padding: 0 10px; /* 左右に余白を確保 */
+    }
+    h2 {
+        font-size: 20px; /* 見出しのフォントサイズを小さく */
+        margin: 30px 0; /* 余白を少し減らす */
+    }
+    p {
+        font-size: 10px; /* テキストのフォントサイズを小さく */
+        line-height: 1; /* 行間を詰める */
+    }
 }
